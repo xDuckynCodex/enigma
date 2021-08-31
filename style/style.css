@@ -1,0 +1,56 @@
+.container {
+  width: 80%;
+  height: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.header-title {
+  text-align: center;
+  margin: 0 10%;
+}
+
+.select {
+  width: 80%;
+  margin: 5% auto;
+  display: flex;
+}
+.select-code {
+  width: 25%;
+}
+.select-code-input {
+  width: 50%;
+}
+
+.message {
+  margin: 5% 0;
+}
+.message-input {
+  margin: 5% 0;
+  width: 100%;
+  height: 15%;
+  text-transform: uppercase;
+  font-size: 2rem;
+  text-align: center;
+}
+.message-btn {
+  width: 215px;
+  margin: 0 auto;
+}
+
+.btn {
+  width: 75px;
+  height: 30px;
+  border: none;
+  border-radius: 10px;
+  background-color: #007bff;
+  padding: 0;
+  margin: 0 15px;
+}
+.btn:hover {
+  background-color: #006bdd;
+}
+
+/*# sourceMappingURL=style.css.map */

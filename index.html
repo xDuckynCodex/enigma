@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enigma Code</title>
+    <link rel="stylesheet" href="./style/style.css">
+
+</head>
+<body>
+    <main class="container">
+        <header class="header">
+            <h2 class="header-title">Enigma Code</h2>
+        </header>
+        <section class="select" >
+            <div class="select-code" >
+                <label for="">Key:</label>
+                <select name="key-1" id="key-1" class="select-code-input">
+                    
+                </select>
+            </div>
+            <div class="select-code" >
+                <label for="">Key:</label>
+                <select name="key-2" id="key-2" class="select-code-input">
+
+                </select>
+            </div>
+            <div class="select-code">
+                <label for="">Key:</label>
+                <select name="key-3" id="key-3" class="select-code-input">
+
+                </select>
+            </div>
+            <div class="select-code">
+                <label for="">Key:</label>
+                <select name="key-4" id="key-4" class="select-code-input">
+                </select>
+            </div>
+        </section>
+        <!-- message input -->
+        <section class="message">
+            <textarea class="message-input" name="message" id="message-input" cols="30" rows="5"></textarea>
+            <div class="message-btn">
+                <button class="btn message-btn-encode" onclick="encodeInput()">Encode</button>
+                <button class="btn message-btn-decode">Decode</button>
+            </div>
+            <textarea class="message-input" name="message" id="message-output" cols="30" rows="5" disabled></textarea>
+        </section>
+
+    </main>
+
+
+    <script src="./app.js"></script>
+</body>
+</html>
