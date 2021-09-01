@@ -52,38 +52,36 @@ function encodeInput() {
     let keyThird = document.getElementById('key-3').value - 1;
     let keyFourth = document.getElementById('key-4').value - 1;
     const allKeys = [keyFirst, keySecond, keyThird, keyFourth];
-    console.log(allKeys);
 
     //check key
     if (keyFirst < 0 && keySecond < 0 && keyThird < 0 && keyFourth <0 ) {
         alert("Please chose key")
-    };
+    } else {
+        //input message
+        let input = document.getElementById('message-input').value.toUpperCase();
+        const myArray = input.split("");
+        
+        //create output
+        let output = [];
+        output.push(allKeys.join(''));
+        
+        // //function encode
+        for (let i = 0; i < myArray.length; i++) {
+            //step
+            let $1 = myArray[i];
+            let $2 = mainCode[allKeys[0]];
+            let $3 = $2[$1];
+            let $4 = mainCode[allKeys[1]];
+            let $5 = $4[$3];
+            let $6 = mainCode[allKeys[2]];
+            let $7 = $6[$5];
+            let $8 = mainCode[allKeys[3]];
+            let $9 = $8[$7];
+            //add ele
+            output.push($9);
+        }
 
-    //input message
-    let input = document.getElementById('message-input').value.toUpperCase();
-    const myArray = input.split("");
-
-    //create output
-    let output = [];
-    output.push(allKeys.join(''));
-    
-    // //function encode
-    for (let i = 0; i < myArray.length; i++) {
-        //step
-        let $1 = myArray[i];
-        let $2 = mainCode[allKeys[0]];
-        let $3 = $2[$1];
-        let $4 = mainCode[allKeys[1]];
-        let $5 = $4[$3];
-        let $6 = mainCode[allKeys[2]];
-        let $7 = $6[$5];
-        let $8 = mainCode[allKeys[3]];
-        let $9 = $8[$7];
-        //add ele
-        output.push($9);
-        console.log(output)
+        //check output
+        document.getElementById("message-output").value = output.join('');
     }
-
-    //check output
-    document.getElementById("message-output").value = output.join('');
 }

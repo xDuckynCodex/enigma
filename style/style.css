@@ -23,7 +23,7 @@ body {
 
 .select {
   width: 80%;
-  margin: 5% auto;
+  margin: 50px auto;
   display: flex;
 }
 .select-code {
@@ -37,7 +37,7 @@ body {
   position: relative;
 }
 .message-input {
-  margin: 5% auto 0 auto;
+  margin: 30px auto 0 auto;
   width: 90%;
   height: 15%;
   text-transform: uppercase;
